@@ -1,6 +1,4 @@
-# jan-portofolio
-Modular, responsive portfolio site showcasing automation systems, branded reporting, and web development by Jan Petrus Vermaak. Built with HTML, CSS, and JavaScript.
-# Jan Petrus Vermaak – Professional Portfolio
+﻿# Jan Petrus Vermaak – Professional Portfolio
 
 **Automation-first design meets professional branding.**  
 Modular, responsive portfolio site showcasing automation systems, branded reporting, and web development. Built with HTML, CSS, and JavaScript.
@@ -50,8 +48,8 @@ To deploy:
 
 **Jan Petrus Vermaak**  
 Automation Specialist & Data Developer  
-📧 janpetrusvermaak@gmail.com  
-🌐 www.linkedin.com/in/jan-petrus-vermaak]
+📧 [your-email@example.com]  
+🌐 [LinkedIn Profile] | [Portfolio Site]
 
 ---
 
