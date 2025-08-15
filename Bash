@@ -1,0 +1,5 @@
+git init
+git remote add origin https://github.com/your-username/jpv-portfolio.git
+git add .
+git commit -m "Initial portfolio commit"
+git push -u origin main
