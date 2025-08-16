@@ -1,4 +1,11 @@
-﻿
+﻿# Jan Petrus Vermaak – Portfolio
+
+This repository hosts the modular, production-ready portfolio site of Jan Petrus Vermaak — Automation Specialist & Data Developer.
+
+## 🌐 Live Site
+
+🔗 [https://janvermaak1.github.io/jan-portofolio/](https://janvermaak1.github.io/jan-portofolio/)
+
 ---
 
 ## 📌 Deployment
@@ -9,7 +16,7 @@ To deploy:
 
 1. Push to your GitHub repository  
 2. Navigate to **Settings > Pages**  
-3. Select branch: `main` and folder: `/root`  
+3. Select branch: `main` and folder: `/ (root)`  
 4. Save and view your live site
 
 ---
@@ -18,15 +25,9 @@ To deploy:
 
 **Jan Petrus Vermaak**  
 Automation Specialist & Data Developer  
-📧 jan@example.com  
-🌐 [LinkedIn Profile] | [Portfolio Site]
-
----
-
-## 🧠 Philosophy
-
-Clarity, modularity, and continuous improvement.  
-Every page reflects a commitment to scalable design and professional presentation.
+📧 janvermaak.dev@gmail.com  
+🌐 [LinkedIn Profile](https://www.linkedin.com/in/janvermaak1)  
+🌐 [Portfolio Site](https://janvermaak1.github.io/jan-portofolio/)
 
 ---
 
@@ -43,10 +44,21 @@ I believe in automation-first design, iterative improvement, and presenting work
 
 ---
 
+## 🧠 Philosophy
+
+Clarity, modularity, and continuous improvement.  
+Every page reflects a commitment to scalable design and professional presentation.
+
+---
+
 ## 🌟 Project Highlights
 
-| Project             | Description                                                       | Tech Stack           |
-|---------------------|-------------------------------------------------------------------|----------------------|
+| Project              | Description                                                       | Tech Stack           |
+|----------------------|-------------------------------------------------------------------|----------------------|
 | Inventory System     | Modular Python backend with Excel reporting and branded UI        | Python, Excel, CSS   |
 | Healthcare Automation| C++ modules for patient data processing and workflow optimization | C++, HTML, JS        |
 | Portfolio Website    | Multi-page responsive site with unified branding and navigation   | HTML, CSS, JavaScript|
+
+---
+
+## 📁 Structure
