@@ -1,71 +1,51 @@
 ﻿import os
-from PIL import Image
-import csscompressor
-import rjsmin
+import gzip
+import shutil
+import logging
+from pathlib import Path
 
-# === CONFIG ===
-IMAGE_DIR = "assets/images"
-CSS_DIR = "assets/css"
-JS_DIR = "assets/js"
-HTML_FILES = ["index.html", "about.html"]  # Add more if needed
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.StreamHandler()]
+)
 
-# === IMAGE COMPRESSION ===
-def compress_images():
-    for filename in os.listdir(IMAGE_DIR):
-        if filename.lower().endswith((".png", ".jpg", ".jpeg")):
-            path = os.path.join(IMAGE_DIR, filename)
-            img = Image.open(path)
-            img.save(path, optimize=True, quality=85)
-            print(f"Compressed: {filename}")
+def compress_file(input_path: Path, output_path: Path) -> None:
+    """Compress a single file using gzip."""
+    logging.info(f"Compressing: {input_path} → {output_path}")
+    with input_path.open('rb') as f_in, gzip.open(output_path, 'wb') as f_out:
+        shutil.copyfileobj(f_in, f_out)
+    logging.info(f"Compression complete: {output_path}")
 
-# === CSS MINIFICATION ===
-def minify_css():
-    for filename in os.listdir(CSS_DIR):
-        if filename.endswith(".css") and not filename.endswith(".min.css"):
-            path = os.path.join(CSS_DIR, filename)
-            with open(path, "r") as f:
-                minified = csscompressor.compress(f.read())
-            min_path = path.replace(".css", ".min.css")
-            with open(min_path, "w") as f:
-                f.write(minified)
-            print(f"Minified CSS: {filename} → {os.path.basename(min_path)}")
+def optimize_directory(source_dir: Path, target_dir: Path, extensions: tuple = ('.txt', '.log', '.csv')) -> None:
+    """
+    Compress eligible files from source_dir into target_dir.
+    
+    Args:
+        source_dir (Path): Directory containing files to compress.
+        target_dir (Path): Destination for compressed files.
+        extensions (tuple): File extensions to compress.
+    """
+    if not source_dir.exists():
+        logging.error(f"Source directory does not exist: {source_dir}")
+        return
 
-# === JS MINIFICATION ===
-def minify_js():
-    for filename in os.listdir(JS_DIR):
-        if filename.endswith(".js") and not filename.endswith(".min.js"):
-            path = os.path.join(JS_DIR, filename)
-            with open(path, "r") as f:
-                minified = rjsmin.jsmin(f.read())
-            min_path = path.replace(".js", ".min.js")
-            with open(min_path, "w") as f:
-                f.write(minified)
-            print(f"Minified JS: {filename} → {os.path.basename(min_path)}")
+    target_dir.mkdir(parents=True, exist_ok=True)
+    logging.info(f"Optimizing directory: {source_dir} → {target_dir}")
 
-# === HTML PATCHING ===
-def patch_html():
-    for file in HTML_FILES:
-        with open(file, "r", encoding="utf-8") as f:
-            html = f.read()
+    for file_path in source_dir.rglob('*'):
+        if file_path.is_file() and file_path.suffix in extensions:
+            compressed_name = file_path.with_suffix(file_path.suffix + '.gz').name
+            output_path = target_dir / compressed_name
+            compress_file(file_path, output_path)
 
-        # Add loading="lazy" to <img> tags
-        html = html.replace("<img ", '<img loading="lazy" ')
+    logging.info("Directory optimization complete.")
 
-        # Add defer to <script> tags
-        html = html.replace("<script ", '<script defer ')
-
-        # Replace CSS/JS links with minified versions
-        html = html.replace("styles.css", "styles.min.css")
-        html = html.replace("main.js", "main.min.js")
-
-        with open(file, "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"Updated HTML: {file}")
-
-# === RUN ALL ===
 if __name__ == "__main__":
-    compress_images()
-    minify_css()
-    minify_js()
-    patch_html()
-    print("\n✅ Optimization complete. Re-run Lighthouse to check performance.")
+    # Example usage
+    SOURCE = Path("data/raw")
+    TARGET = Path("data/compressed")
+    EXTENSIONS = ('.txt', '.csv', '.log')
+
+    optimize_directory(SOURCE, TARGET, EXTENSIONS)

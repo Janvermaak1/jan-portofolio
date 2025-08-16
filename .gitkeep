@@ -1,0 +1,17 @@
+cert_excel/.gitkeep
+cert_python/.gitkeep
+inventory/.gitkeep
+logo/.gitkeep
+playbooks/.gitkeep
+roles/.gitkeep
+roles/ansible-role-aws/.gitkeep
+roles/ansible-role-aws/tasks/.gitkeep
+roles/ansible-role-aws/handlers/.gitkeep
+roles/ansible-role-aws/meta/.gitkeep
+roles/ansible-role-aws/templates/.gitkeep
+roles/ansible-role-aws/files/.gitkeep
+roles/ansible-role-aws/defaults/.gitkeep
+roles/ansible-role-aws/tests/.gitkeep
+roles/ansible-role-aws/tests/inventory/.gitkeep
+roles/ansible-role-aws/tests/inventory/group_vars/.gitkeep
+roles/ansible-role-aws/tests/inventory/host_vars/.gitkeep

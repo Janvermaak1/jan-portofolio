@@ -1,0 +1,51 @@
+# macOS system files
+.DS_Store
+
+# Logs
+*.log
+
+# Archives
+*.zip
+*.tar
+*.gz
+
+# Node.js dependencies
+node_modules/
+
+# Python cache (if backend scripts are added)
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+*.min.css
+*.min.js
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+Thumbs.db
+Desktop.ini
+
+# Optional: system backups
+*.bak
+*.tmp
+*.swp
+
+# Optional: compiled assets
+*.class
+*.o
+*.out
+
+# Optional: generated documentation
+docs/
