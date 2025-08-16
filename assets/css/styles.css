@@ -1,16 +1,23 @@
-﻿body {
-}
-/* assets/css/styles.css */
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    color: #fff;
+﻿:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f4f4f4;
+    --text: #333;
+    --font-main: 'Segoe UI', sans-serif;
+    --highlight: gold;
 }
 
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Navigation */
 nav {
-    background-color: #111;
-    padding: 1em;
+    background-color: var(--primary);
+    padding: 1rem;
     text-align: center;
 }
 
@@ -21,20 +28,33 @@ nav {
     }
 
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin: 0 15px;
         }
 
-            nav ul li a {
-                color: gold;
-                text-decoration: none;
-                font-weight: bold;
-            }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 1rem;
+    }
 
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a.active {
+            font-weight: bold;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
     background: linear-gradient(to bottom, #000, #222);
+    color: white;
 }
 
     .hero h1 {
@@ -46,43 +66,20 @@ nav {
         font-style: italic;
         color: #ccc;
     }
-/* styles.css */
 
-<button id="menu-toggle" > ☰ Menu</button >
-
-:root {
-    --primary: #2c3e50;
-    --accent: #3498db;
-    --bg: #f4f4f4;
-    --text: #333;
-    --font-main: 'Segoe UI', sans-serif;
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
 }
 
-body {
-    margin: 0;
-    font-family: var(--font-main);
-    background-color: var(--bg);
-    color: var(--text);
-}
-
-header, nav {
-    background-color: var(--primary);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-    nav a {
-        color: white;
-        margin: 0 1rem;
-        text-decoration: none;
-        font-weight: bold;
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-        nav a:hover {
-            color: var(--accent);
-        }
-
+/* Sections */
 section {
     display: none;
     padding: 2rem;
@@ -94,67 +91,29 @@ section {
         display: block;
     }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
-}
-
-    .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-@media (max-width: 768px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-        nav a {
-            margin: 0.5rem 0;
-        }
-}
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
-}
-
-    .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-.project-card {
+/* Cards */
+.project-card,
+.certificate-card {
     background: white;
     border: 1px solid #ddd;
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.certificate-card {
-    margin: 2rem 0;
     text-align: center;
 }
-nav a.active {
-    font-weight: bold;
-    color: #0077cc;
-    border-bottom: 2px solid #0077cc;
-}
-<a href="index.html" > Home</a >
-<a href="cv-cover.html" > CV</a >
-<a href="portfolio.html" class="active" > Portfolio</a >
-<a href="work-samples.html" > Work Samples</a >
-<a href="certificates.html" > Certificates</a >
+
+/* Mobile Menu Toggle */
 #menu-toggle {
     display: none;
     background: none;
     font-size: 1.5rem;
     border: none;
     margin: 1rem;
+    color: var(--accent);
 }
 
+/* Responsive Navigation */
 @media (max-width: 768px) {
     nav {
         display: none;
@@ -163,6 +122,10 @@ nav a.active {
 
         nav.show {
             display: flex;
+        }
+
+        nav a {
+            margin: 0.5rem 0;
         }
 
     #menu-toggle {

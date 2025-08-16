@@ -5,21 +5,17 @@ import { setupSectionTransitions } from './transitions.js';
 import { setupScrollReveal } from './scrollReveal.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    setupNavigation();
-    setupSectionTransitions();
-    setupScrollReveal();
-});
-// main.js
+    setupSectionTransitions();      // Handles section switching logic
+    setupNavigation();              // Navigation now aware of transitions
+    setupScrollReveal();           // Adds reveal animations on scroll
 
-import { setupNavigation } from './navigation.js';
-import { setupSectionTransitions } from './transitions.js';
-import { setupScrollReveal } from './scrollReveal.js';
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
 
-document.addEventListener("DOMContentLoaded", () => {
-    setupSectionTransitions();
-    setupNavigation(); // now uses transitions-aware showSection
-    setupScrollReveal();
-});
-document.getElementById('menu-toggle')?.addEventListener('click', () => {
-    document.querySelector('nav')?.classList.toggle('show');
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    }
 });
