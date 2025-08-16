@@ -1,7 +1,5 @@
 git init
-git remote add origin https://github.com/your-username/jpv-portfolio.git
+git remote add origin https://github.com/yourusername/jan-portfolio.git
 git add .
-git commit -m "Initial portfolio commit"
+git commit -m "Initial commit"
 git push -u origin main
-# Example using CLI (optional)
-npx clean-css-cli -o styles.min.css styles.css

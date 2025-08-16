@@ -1,0 +1,14 @@
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\bin\Debug\net8.0\Portofolio_JPV.exe
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\bin\Debug\net8.0\Portofolio_JPV.deps.json
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\bin\Debug\net8.0\Portofolio_JPV.runtimeconfig.json
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\bin\Debug\net8.0\Portofolio_JPV.dll
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\bin\Debug\net8.0\Portofolio_JPV.pdb
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\Portofolio_JPV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\Portofolio_JPV.AssemblyInfoInputs.cache
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\Portofolio_JPV.AssemblyInfo.vb
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\Portofolio_JPV.vbproj.CoreCompileInputs.cache
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\Portofolio_JPV.dll
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\refint\Portofolio_JPV.dll
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\Portofolio_JPV.pdb
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\Portofolio_JPV.genruntimeconfig.cache
+C:\Users\tiger\Documents\CV\jpv\portofolio\Portofolio_JPV\obj\Debug\net8.0\ref\Portofolio_JPV.dll

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "p65OYH9xf4c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tiger\\Documents\\CV\\jpv\\portofolio\\Portofolio_JPV\\Portofolio_JPV.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tiger\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.19\\microsoft.dotnet.ilcompiler.8.0.19.nupkg.sha512",
+    "C:\\Users\\tiger\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.19\\microsoft.net.illink.tasks.8.0.19.nupkg.sha512",
+    "C:\\Users\\tiger\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.19\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}
