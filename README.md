@@ -25,7 +25,7 @@ To deploy:
 
 **Jan Petrus Vermaak**  
 Automation Specialist & Data Developer  
-📧 janvermaak.dev@gmail.com  
+📧 janpetrusvermaak@gmail.com  
 🌐 [LinkedIn Profile](https://www.linkedin.com/in/janvermaak1)  
 🌐 [Portfolio Site](https://janvermaak1.github.io/jan-portofolio/)
 
