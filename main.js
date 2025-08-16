@@ -23,3 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById('menu-toggle')?.addEventListener('click', () => {
     document.querySelector('nav')?.classList.toggle('show');
 });
+# Example using CLI (optional)
+npx terser main.js -o main.min.js
